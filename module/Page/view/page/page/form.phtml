@@ -1,0 +1,26 @@
+<?php if(isset($form)): ?>
+<?php $form->prepare(); // The correct enctype is set here ?>
+<?php echo $this->form()->openTag($form); ?>
+	 <?php echo $this->formFileSessionProgress(); ?>
+    <div class="form-element">
+        <?php $element = $form->get('image-file'); ?>
+        <?php echo $this->formLabel($element); ?>
+        <?php echo $this->formFile($element); ?>
+        <?php echo $this->formElementErrors($element); ?>
+    </div>
+    <div class="form-element">
+        <?php $element = $form->get('title'); ?>
+        <?php echo $this->formLabel($element); ?>
+        <?php echo $this->formText($element); ?>
+        <?php echo $this->formElementErrors($element); ?>
+    </div>
+
+    <button>Submit</button>
+
+<?php echo $this->form()->closeTag(); ?>
+<?php endif;?>
+<?php if(isset($data)):?>
+	<pre>
+		<?php print_r($data); ?>
+	</pre>
+<?php endif;?>

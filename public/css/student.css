@@ -1,0 +1,254 @@
+#page-title{
+	font-size: 36px;
+	margin: 0;
+	line-height: 60px;
+}
+.page-title{
+	margin-top: 20px;
+}
+.page-title .sub-logo{
+	margin-right: 10px;
+}
+.page-title > div{
+	display: inline-block;
+	vertical-align: middle;
+}
+#sub-page-title{
+	font-size: 20px;
+	font-weight: 300;
+	color: #787878;
+	margin: 0;
+}
+.sidebar .right-sidebar .title{
+	padding: 10px 20px;
+	text-align: left;
+	background: #eaeaea;
+}
+.sidebar .right-sidebar .stat{
+	padding: 0 20px;
+	color: #787878;
+}
+.sidebar .right-sidebar .stat > div{
+	padding: 20px 0;
+	border-bottom: 1px dotted #eaeaea;
+}
+.sidebar .right-sidebar .stat > div:last-child{
+	padding-bottom: 0;
+	border-bottom: none;
+}
+.sidebar .right-sidebar .stat .value{
+	font-size: 24px;
+	font-weight: 300;
+	padding-right: 30px;
+	background: url(../images/student/shape.png) right center no-repeat;
+	-webkit-background-size: 30px 20px;
+	background-size: 30px 20px;
+	display: inline-block;
+}
+.sidebar .right-sidebar .stat .value.no-bg{
+	background: none;
+	padding-right: 0;
+}
+.sidebar .right-sidebar .stat .descr{
+	font-size: 11px;
+}
+.lesson .main-content{
+	text-align: center;
+}
+.student .main-content{
+	text-align: center;
+}
+.student .main-content section{
+	padding: 20px 0;
+	border-bottom: 1px dotted #eaeaea;
+	text-align: left;
+}
+.student .main-content section:first-child{
+	padding-top: 0;
+}
+.student .main-content section:last-child{
+	padding-bottom: 0;
+	border-bottom: none;
+}
+.student .main-content section .title{
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.student .main-content section .content a{
+	color: #ce3a3a;
+	text-decoration: none;
+}
+.student .main-content section .content a:hover{
+	text-decoration: underline;
+}
+.student .main-content section ul{
+	line-height: 25px;
+    list-style-type: square;
+    padding-left: 14px;
+    width: 100%;
+}
+.student .main-content section ul li{
+	color: #D4D4D4;
+    display: list-item;
+}
+.student .main-content section ul li .wrap{
+	color: #363636;
+	font-style: italic;
+}
+.tab-content + a.button{
+	margin-top: 20px;
+}
+
+.tab-content > .title{
+	font-family: 'days', arial;
+	text-align: left;
+	font-size: 24px;
+	padding-left: 40px;
+	height: 30px;
+	line-height: 30px;
+	background-position: left top;
+	-webkit-background-size: 30px 30px;
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #eaeaea;
+}
+.wait .tab-content > .title{
+	background-image: url(../images/student/wait.png);
+}
+.waiting .tab-content > .title{
+	background-image: url(../images/student/waiting.png);
+}
+.decline .tab-content > .title{
+	background-image: url(../images/student/decline.png);
+}
+.checked .tab-content > .title{
+	background-image: url(../images/student/checked.png);
+}
+.student .main-content section.rule{
+	padding-left: 40px;
+	background: url(../images/student/warning.png) left top no-repeat;
+	-webkit-background-size: 32px 29px;
+	background-size: 32px 29px;
+	padding-top: 0;
+	margin-top: 20px;
+}
+.student .main-content section.rule .content{
+	color: #787878;
+	font-size: 12px;
+}
+.messages .single-message{
+	width: 460px;
+}
+.single-message .link{
+	width: 420px;
+}
+section .comments .title{
+	font-size: 12px;
+	margin-bottom: 0;
+}
+section .comments .content{
+	color: #787878;
+	font-style: italic;
+	font-size: 11px;
+}
+section .comments{
+	margin-bottom: 20px;
+}
+.student form input, .student form textarea{
+	width: 450px;
+	line-height: 15px;
+	color: #787878;
+}
+.student form textarea{
+	padding: 15px;
+}
+.student.current-lesson-result form button{
+	margin-top: 15px;
+	padding: 0 10px;
+}
+.student .sidebar .main-content > .sub-title{
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #f3f3f3;
+	box-shadow: 0 -1px 0 #d4d4d4;
+}
+.main-content > .inner{
+	background: #fff;
+	padding:15px 20px 20px 20px;
+	text-align: left;
+}
+.main-content > .inner > .title{
+	font-weight: 600;
+	font-size: 14px;
+}
+.lessons-list .main-content section .content ul{
+	list-style-type: none;
+	padding: 0;
+}
+.lessons-list .main-content section .content ul li{
+	padding: 5px;
+	border: 1px solid transparent;
+	font-size: 15px;
+	color: #787878;
+}
+.lessons-list .main-content section .content ul li a{
+	color: #363636;
+	text-decoration: none;
+	font-size: 14px;
+}
+.lessons-list .main-content section .content ul li:hover{
+	border-color: #eaeaea;
+	color: #ce3a3a;
+}
+.lessons-list .main-content section .content ul li:hover a{
+	color: #ce3a3a;
+	text-decoration: none;
+}
+.lessons-list .main-content section .content ul li span{
+	margin-right: 15px;
+}
+.lessons-sep .messages + a.button{
+	display: block;
+}
+.lessons-list .inner section .title{
+	font-weight: 600;
+	font-size: 13px;
+}
+.support section .content .descr span{
+	font-weight: bold;
+}
+.support section .content .descr{
+	font-size: 12px;
+}
+.support .main-content section .title{
+	margin-bottom: 10px;
+}
+.support .info{
+	margin-top: 15px;
+}
+.support .info > div{
+	padding-left: 40px;
+	-webkit-background-size: 30px 30px;
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	line-height: 24px;
+	display: inline-block;
+	width: 190px;
+}
+.support .info .mail{
+	background-image: url(../images/author-form/mail.png);
+}
+.support .info .phone{
+	background-image: url(../images/author-form/phone.png);
+}
+.support .info .skype{
+	background-image: url(../images/author-form/skype.png);
+}
+.support .info .icq{
+	background-image: url(../images/author-form/icq.png);
+}

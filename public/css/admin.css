@@ -1,0 +1,162 @@
+.sa-panel + button{
+	margin-top: 20px;
+}
+
+/*=====================================================================================*/
+
+form.dashed{
+	line-height: 50px;
+	padding: 0 20px;
+	margin: 10px 0;
+	border-radius: 5px;
+	background-image: url(../images/form-pattern.png);
+}
+form.dashed div{
+	display: inline-block;
+	vertical-align: top;
+}
+form.date-range button{
+	padding: 0 15px;
+	line-height: 30px;
+}
+form.dashed label, form.dashed div{
+	color: #787878;
+	margin-right: 10px;
+}
+form.date-range .form-item{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+form.date-range input#date-range{
+	width: 170px;
+	height: 30px;
+}
+table.sa-log tr td:last-child{
+	font-style: italic;
+}
+table.sa-log tr td:nth-child(1){
+	width: 150px;
+}
+table.sa-log tr td:nth-child(2){
+	width: 160px;
+}
+table.sa-log tr td:nth-child(3), table.sa-log tr td:nth-child(4){
+	width: 120px;
+	text-align: center;
+}
+
+#edit-author{
+	letter-spacing: 15px;
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #dcdcdc;
+	padding-bottom: 10px;
+}
+#edit-author .form-item{
+	letter-spacing: 1px;
+	width: 270px;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+#edit-author .form-item label{
+	display: block;
+	margin-bottom: 10px;
+}
+#edit-author .form-item input{
+	width: 240px;
+	color: #363636;
+	height: 30px;
+	line-height: 15px;
+	background-position: right center;
+	background-repeat: no-repeat;
+	-webkit-background-size: 30px 30px;
+	background-size: 30px 30px;
+	padding-right: 30px;
+}
+#edit-author .form-item input#email{
+	background-image: url(../images/author-form/mail.png);
+}
+#edit-author .form-item input#phone{
+	background-image: url(../images/author-form/phone.png);
+}
+#edit-author .form-item input#skype{
+	background-image: url(../images/author-form/skype.png);
+}
+#edit-author .form-item input#icq{
+	background-image: url(../images/author-form/icq.png);
+}
+.author-action .page-content{
+	background: #eaeaea;
+	padding: 20px;
+}
+#edit-author + button{
+	margin-top: 10px;
+}
+table.sa-panel tr td:nth-child(1){
+	width: 150px;
+}
+table.sa-panel tr td:nth-child(2){
+	width: 140px;
+}
+table.sa-panel tr td:nth-child(3){
+	width: 80px;
+	text-align: center;
+}
+table.sa-panel tr td:nth-child(4), table.sa-panel tr td:nth-child(5){
+	width: 120px;
+	text-align: center;
+}
+table.sa-panel tr td:nth-child(6){
+	width: 230px;
+	text-align: center;
+	padding: 15px 0;
+}
+table.sa-panel .actions button{
+	display: inline-block;
+	vertical-align: middle;
+	background: none;
+	-webkit-background-size: 32px 32px;
+	background-size: 32px 32px;
+	background-position: center center;
+	width: 20px;
+	height: 32px;
+	padding: 0;
+	border: none;
+	margin: 0 5px;
+}
+table.sa-panel .actions button.delete{
+	background-image: url(../images/admin-panel/delete.png);
+}
+table.sa-panel .actions button.block{
+	background-image: url(../images/admin-panel/block.png);
+}
+table.sa-panel .actions button.student{
+	background-image: url(../images/admin-panel/student.png);
+	width: 10px;
+}
+table.sa-panel .actions button.group{
+	background-image: url(../images/admin-panel/group.png);
+}
+table.sa-panel .actions button.switch{
+	background-image: url(../images/admin-panel/onoff.png);
+	-webkit-background-size: 42px 64px;
+	background-size: 42px 64px;
+	height: 32px;
+	width: 42px;
+}
+table.sa-panel .actions button.switch.on{
+	background-position: 0 0;
+}
+table.sa-panel .actions button.switch.off{
+	background-position: 0 -32px;
+}
+
+form.date-range input{
+	width: 160px;
+	padding-right: 25px;
+	background: url(../images/date-picker.png) 175px 8px / 15px 15px no-repeat #fff;
+}
+.jq-selectbox .trigger .arrow{
+	right: 19px;
+}

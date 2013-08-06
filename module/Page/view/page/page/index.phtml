@@ -1,0 +1,48 @@
+<?php
+// module/Skid/view/skid/skid/index.phtml:
+$this->headLink()->appendStylesheet($this->basePath() . '/css/123.css');
+$this->headScript()->appendFile($this->basePath() . '/filename.js');
+echo $this->render('admin');
+if (!isset($id)):
+	$title = 'My Skids';
+	$this->headTitle($title);
+	
+	?>
+	<!-- <pre>
+		<?php print_r($Skids); ?>
+	</pre> -->
+	<h1><?php echo $this->escapeHtml($title); ?></h1>
+	<p>
+	    <a href="<?php echo $this->url('skid', array('action'=>'add'));?>">Add new Skid</a>
+	</p>
+	<table class="table">
+	<tr>
+		<th>ID</th>
+	    <th>Title</th>
+	    <th>Artist</th>
+	    <th>&nbsp;</th>
+	</tr>
+	<?php foreach ($Skids as $Skid) : ?>
+	<tr>
+		<td><?php echo $this->escapeHtml($Skid->id);?></td>
+	    <td><a href="<?php echo $this->basePath() . '/skid/' . $Skid->id;?>"><?php echo $this->escapeHtml($Skid->title);?></a></td>
+	    <td><?php echo $this->escapeHtml($Skid->artist);?></td>
+	    <td>
+	        <a href="<?php echo $this->url('skid',
+	            array('action'=>'edit', 'id' => $Skid->id));?>">Edit</a>
+	        <a href="<?php echo $this->url('skid',
+	            array('action'=>'delete', 'id' => $Skid->id));?>">Delete</a>
+	    </td>
+	</tr>
+	<?php endforeach; ?>
+	</table>
+<?php else:
+	$this->headTitle($this->escapeHtml($Skid->title));
+?>
+	<h1><?php echo $this->escapeHtml($Skid->title); ?></h1>
+	<h2><?php echo $this->escapeHtml($Skid->artist); ?></h2>
+	<pre>
+		<?php print_r($Skid); ?>
+	</pre>
+	<a href="<?php echo $this->basePath() . '/skid';?>">Back</a>
+<?php endif; ?>

@@ -1,0 +1,35 @@
+<?php 
+foreach($page->css as $css)
+	$this->headLink()->appendStylesheet($this->basePath() . '/css/'.$css.'.css');
+foreach($page->js as $js)
+	$this->headScript()->appendFile($this->basePath() . 'js/'.$js.'.js');
+$title = $this->page->title;
+$this->headTitle($title);
+?>
+<body class="<?php echo implode(' ', $page->classes); ?> ">
+	<div id="page">
+		<!-- <pre>
+			<?php print_r($page->top_menu);?>
+		</pre> -->
+        <header>
+            <div id="top-panel">
+                <div id="site-name"><span>anti</span>ТРЕНИНГИ</div>
+                <div id="sub-title"><?php echo $page->sub_title; ?></div>
+                <div id="login-menu">
+                	<?php
+                		if($page->top_menu[name] != null):?>
+							<div class="name"><?php echo $page->top_menu['name']; ?></div>
+					<?php endif; ?>
+					<ul>
+                    <?php
+                    	foreach($page->top_menu['menu'] as $item):?>
+                    	<li <?php if($item['active']) echo 'class="active"'; ?>>
+                    		<a href="<?php echo $item['link']; ?>"><?php echo $item['item']; ?></a>
+                    	</li>
+                    <?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="content">
+        	<h1 id="page-title"><?php echo $this->escapeHtml($title); ?></h1>
