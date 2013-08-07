@@ -13,6 +13,8 @@ use Zend\Db\Adapter\Adapter;
 
 class discountsModel {
 
+    protected  $adapter;
+    protected  $sql;
 
     public function __get($name){
 
@@ -20,7 +22,7 @@ class discountsModel {
 
             return $this->$method();
 
-        }else return;
+        }else return false;
     }
 
     public function __set($name, $data){
@@ -28,11 +30,11 @@ class discountsModel {
         if (method_exists($this, ($method =$name))){
 
             foreach($data  as $key =>$Value){
-                $this->$key = $Value ;
-            }
-            $data = $this->$method();
 
-            return $data;
+                $this->$key = $Value ;
+
+            }
+
         }
 
     }
@@ -42,6 +44,14 @@ class discountsModel {
 
         $this->adapter = $adapter;
         $this->sql = new \Zend\Db\Sql\Sql($adapter);
+
+    }
+
+
+    public  function getDiscounts(){
+
+        echo 124;
+        exit;
 
     }
 

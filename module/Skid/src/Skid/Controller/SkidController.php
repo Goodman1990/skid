@@ -4,26 +4,30 @@ namespace Skid\Controller;
 
 
 use Zend\Mvc\Controller\AbstractActionController;
-use Zend\EventManager\EventInterface as Event;
-use Zend\EventManager\EventManager;
+use Skid\Controller\CategoryController;
+//use Zend\EventManager\EventInterface as Event;
+//use Zend\EventManager\EventManager;
+use Skid\Model\discountsModel;
 
 
 class SkidController extends AbstractActionController
 {
 
-
-    public function __construct()
-    {
-        $events = new EventManager();
-        $d = $events->trigger('do');
-        print_r($d);
-        exit;
-
-    }
-
-
     public function indexAction() {
 
+//       print_r();
+//        exit;
+        $discountsModel =   $this->getLocator('discountsModel');
+        $discountsModel->getDiscounts();
 
     }
+
+    protected  function getLocator($Model){
+
+       $sm =  $this->getServiceLocator();
+       $discountsModel =  $sm->get($Model);
+        return $discountsModel;
+
+    }
+
 }
