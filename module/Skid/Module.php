@@ -3,18 +3,17 @@
 namespace Skid;
 
 use Zend\EventManager\EventInterface as Event;
-use Zend\EventManager\EventManager;
-use Zend\Db\ResultSet\ResultSet;
-use Zend\Db\TableGateway\TableGateway;
 use Zend\ModuleManager\Feature\ServiceProviderInterface;
 use Skid\Model\discountsModel;
-use Zend\Session\Config\SessionConfig;
+
 use Skid\Controller\SkidController;
- 
+
 class Module implements ServiceProviderInterface
 {
-    public function getAutoloaderConfig()
-    {
+
+
+    public function getAutoloaderConfig() {
+
         return array(
             'Zend\Loader\ClassMapAutoloader' => array(
                 __DIR__ . '/autoload_classmap.php',
@@ -28,24 +27,24 @@ class Module implements ServiceProviderInterface
     }
 
 
-    public function onBootstrap(Event $e)
-    {
+    public function onBootstrap(Event $e) {
 
     }
 
-    public function getConfig()
-    {
+    public function getConfig() {
+
         return include __DIR__ . '/config/module.config.php';
     }
 
-    public function getServiceConfig()
-    {
+    public function getServiceConfig() {
 
         return array(
             'factories' => array(
-                'discountsModel' =>  function($sm) {
+                'discountsModel' => function ($sm) {
+
                     $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
-                    $table     = new discountsModel($dbAdapter);
+                    $table = new discountsModel($dbAdapter);
+
                     return $table;
                 },
 

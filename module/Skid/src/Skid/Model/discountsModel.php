@@ -15,27 +15,34 @@ class discountsModel {
 
     protected  $adapter;
     protected  $sql;
+    protected  $table;
+    protected  $id;
 
-    public function __get($name){
 
-        if (method_exists($this, ($method = 'get_'.$name))){
 
-            return $this->$method();
-
-        }else return false;
-    }
+//    public function __get($name){
+//
+//        if (method_exists($this, ($method = 'get_'.$name))){
+//
+//            return $this->$method();
+//
+//        }else return false;
+//    }
 
     public function __set($name, $data){
+//            print_r($data);
+//        exit;
 
-        if (method_exists($this, ($method =$name))){
 
             foreach($data  as $key =>$Value){
 
                 $this->$key = $Value ;
 
             }
+            echo $this->table;
+            exit;
 
-        }
+
 
     }
 
@@ -43,15 +50,35 @@ class discountsModel {
     {
 
         $this->adapter = $adapter;
+
         $this->sql = new \Zend\Db\Sql\Sql($adapter);
+
 
     }
 
 
     public  function getDiscounts(){
 
-        echo 124;
-        exit;
+
+
+            $select =$this->sql->select();
+
+            $select->from($this->table);
+
+            $select->where(array('id' => $this->id));
+            $statement = $this->sql->prepareStatementForSqlObject($select);
+            $results = $statement->execute();
+            $data=array();
+
+            foreach ($results as $result){
+
+
+                $data[]=$result;
+
+            }
+
+            return $data;
+
 
     }
 
