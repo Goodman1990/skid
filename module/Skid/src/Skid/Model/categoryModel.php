@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by JetBrains PhpStorm.
  * User: artgen2
@@ -11,7 +12,7 @@ namespace Skid\Model;
 
 use Zend\Db\Adapter\Adapter;
 
-class discountsModel {
+class categoryModel {
 
     protected  $adapter;
     protected  $sql;
@@ -50,17 +51,14 @@ class discountsModel {
     {
 
         $this->adapter = $adapter;
-
         $this->sql = new \Zend\Db\Sql\Sql($adapter);
-        $this->table = 'discounts';
+        $this->table = 'category';
 
 
     }
 
 
-    public  function getDiscountsById(){
-
-
+    public  function categoryInCity(){
 
             $select =$this->sql->select();
 
