@@ -25,11 +25,11 @@ class Settings{
     	if($this->adapter instanceof Adapter){
 	    	$resultSet = $this->adapter->createStatement('SELECT * FROM skid');
 	        $results = $resultSet->execute();
-	        echo '<pre>';
+//	        echo '<pre>';
 	        //$results->next();
-	        print_r($results->next());
-	        echo '</pre>';
-	        exit;
+//	        print_r($results->next());
+//	        echo '</pre>';
+//	        exit;
 	    }
     }
 }

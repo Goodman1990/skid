@@ -5,6 +5,7 @@ return array(
         'invokables' => array(
             'Skid\Controller\Skid' => 'Skid\Controller\SkidController',
             'Skid\Controller\Category' => 'Skid\Controller\CategoryController',
+            'Skid\Controller\Admin' => 'Skid\Controller\AdminController',
         ),
     ),
  
@@ -22,6 +23,21 @@ return array(
                     ),
                     'defaults' => array(
                         'controller' => 'Skid\Controller\Skid',
+                        'action'     => 'index',
+                    ),
+                ),
+            ),
+
+            'admin' => array(
+                'type'    => 'segment',
+                'options' => array(
+                    'route'    => '/admin/[:action]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id' => '[0-9]'
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Skid\Controller\Admin',
                         'action'     => 'index',
                     ),
                 ),

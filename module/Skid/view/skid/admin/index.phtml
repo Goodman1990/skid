@@ -1,0 +1,51 @@
+
+<?php $element = $form->get('title[]'); ?>
+<?php echo $this->formLabel($element); ?>
+<?php echo $this->formText($element); ?>
+<div class="form-error"><?php echo $this->formElementErrors($element); ?></div>
+<div class="descr">Например, «Менеджер социальных сетей»</div>
+
+<?php $fileElement = $form->get('image_full[]')->setAttribute('id','images-auload'); ?>
+<?php echo $this->formLabel($fileElement); ?>
+<?php echo $this->formFile($fileElement); ?>
+
+<?php $fileElement = $form->get('image_short[]')->setAttribute('id','images-auload'); ?>
+<?php echo $this->formLabel($fileElement); ?>
+<?php echo $this->formFile($fileElement); ?>
+
+
+<?php $element = $form->get('description_short[]'); ?>
+<?php echo $this->formLabel($element); ?>
+<?php echo $this->formText($element); ?>
+<div class="form-error"><?php echo $this->formElementErrors($element); ?></div>
+<div class="descr">Например, «Менеджер социальных сетей»</div>
+
+<?php $element = $form->get('description_full[]'); ?>
+<?php echo $this->formLabel($element); ?>
+<?php echo $this->formTextarea($element); ?>
+<div class="form-error"><?php echo $this->formElementErrors($element); ?></div>
+<div class="descr">Например, «Менеджер социальных сетей»</div>
+
+<?php $element = $form->get('date_begin[]'); ?>
+<?php echo $this->formLabel($element); ?>
+<?php echo $this->formText($element); ?>
+<div class="form-error"><?php echo $this->formElementErrors($element); ?></div>
+<div class="descr">Например, «Менеджер социальных сетей»</div>
+
+<?php $element = $form->get('date_end[]'); ?>
+<?php echo $this->formLabel($element); ?>
+<?php echo $this->formText($element); ?>
+<div class="form-error"><?php echo $this->formElementErrors($element); ?></div>
+<div class="descr">Например, «Менеджер социальных сетей»</div>
+
+<?php $element = $form->get('city[]'); ?>
+<?php echo $this->formLabel($element); ?>
+<?php echo $this->formSelect($element); ?>
+<div class="form-error"><?php echo $this->formElementErrors($element); ?></div>
+<div class="descr">Например, «Менеджер социальных сетей»</div>
+
+<?php $element = $form->get('category[]'); ?>
+<?php echo $this->formLabel($element); ?>
+<?php echo $this->formSelect($element); ?>
+<div class="form-error"><?php echo $this->formElementErrors($element); ?></div>
+<div class="descr">Например, «Менеджер социальных сетей»</div>
